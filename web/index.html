@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minimi chat agent</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <button class="new-chat" id="newChat">+ New chat</button>
+      <div class="chat-list" id="chatList"></div>
+      <div class="sidebar-foot">
+        <div class="clock" id="clock"></div>
+        <div class="model" id="model"></div>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="menu" id="menu" aria-label="Chats">☰</button>
+        <div class="title" id="title">New chat</div>
+      </header>
+      <div class="messages" id="messages" aria-live="polite"></div>
+      <form class="composer" id="composer">
+        <textarea id="input" rows="1" placeholder="Ask anything. I search the web when it matters." autofocus></textarea>
+        <button type="submit" id="send">Send</button>
+        <button type="button" id="stop" class="stop" hidden>Stop</button>
+      </form>
+    </main>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

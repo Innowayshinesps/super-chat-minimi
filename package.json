@@ -1,0 +1,29 @@
+{
+  "name": "minimi-chat-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A chat agent with one tool, web search. Answers fast, rechecks what may have changed, remembers what it saw earlier.",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "tsx --disable-warning=ExperimentalWarning src/server.ts",
+    "start": "tsx --disable-warning=ExperimentalWarning src/server.ts",
+    "seed": "tsx --disable-warning=ExperimentalWarning src/seed.ts",
+    "eval": "tsx --disable-warning=ExperimentalWarning evals/run.ts",
+    "test": "tsx --disable-warning=ExperimentalWarning --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "dev:demo": "tsx --disable-warning=ExperimentalWarning src/server.ts --demo"
+  },
+  "dependencies": {
+    "@google/genai": "^3.3.0",
+    "chrono-node": "^2.10.3",
+    "marked": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
